@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join VibeSwipe - Connect with Perfect Matches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">VibeSwipe</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features">Features</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Join VibeSwipe</h1>
+            <p>Connect with the perfect match for your project or career</p>
+        </div>
+
+        <form id="registerForm">
+            <!-- Step 1: Role Selection -->
+            <div id="step1" class="form-step active">
+                <h2>Choose Your Role</h2>
+                <div class="role-selection">
+                    <div class="role-card" data-role="founder" id="founderCard">
+                        <div class="role-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Founder</h3>
+                        <p>Looking for talented developers?</p>
+                        <ul>
+                            <li>Post your project requirements</li>
+                            <li>Match with skilled developers</li>
+                            <li>Manage your project efficiently</li>
+                        </ul>
+                    </div>
+                    <div class="role-card" data-role="developer" id="developerCard">
+                        <div class="role-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Developer</h3>
+                        <p>Looking for exciting projects?</p>
+                        <ul>
+                            <li>Showcase your skills</li>
+                            <li>Find perfect project matches</li>
+                            <li>Work on interesting projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Account Creation -->
+            <div id="step2" class="form-step">
+                <h2>Create Your Account</h2>
+                <div class="social-login">
+                    <button type="button" class="google-btn">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                </div>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <div class="strength-text">Password strength</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <!-- Step 3: Profile Setup -->
+            <div id="step3" class="form-step">
+                <h2>Complete Your Profile</h2>
+                <!-- Founder Profile -->
+                <div id="founderProfile" class="role-profile">
+                    <div class="form-group">
+                        <label>Company Name <span class="required">*</span></label>
+                        <input type="text" id="companyName" placeholder="Enter your company name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select id="companySize">
+                            <option value="">Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="501+">501+ employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Website</label>
+                        <input type="url" id="companyWebsite" placeholder="https://yourcompany.com">
+                    </div>
+                </div>
+                <!-- Developer Profile -->
+                <div id="developerProfile" class="role-profile">
+                    <div class="form-group">
+                        <label>Your 1-Liner <span class="required">*</span></label>
+                        <input type="text" id="oneLiner" placeholder="Write a catchy one-liner that will attract founders (e.g., 'Full-stack wizard turning coffee into code')" required>
+                        <small>This is your chance to stand out! Make it memorable and authentic.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Hourly Rate ($) <span class="required">*</span></label>
+                        <input type="number" id="hourlyRate" min="0" step="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Availability <span class="required">*</span></label>
+                        <select id="availability" required>
+                            <option value="">Select your availability</option>
+                            <option value="full-time">Full-time (40+ hrs/week)</option>
+                            <option value="part-time">Part-time (20-40 hrs/week)</option>
+                            <option value="freelance">Freelance (10-20 hrs/week)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Preferences -->
+            <div id="step4" class="form-step">
+                <h2>Set Your Preferences</h2>
+                <!-- Founder Preferences -->
+                <div id="founderPreferences" class="role-preferences">
+                    <div class="form-group">
+                        <label>Project Type <span class="required">*</span></label>
+                        <select id="projectType" required>
+                            <option value="">Select project type</option>
+                            <option value="mvp-web">Web MVP</option>
+                            <option value="mvp-mobile">Mobile MVP</option>
+                            <option value="mvp-saas">SaaS MVP</option>
+                            <option value="mvp-marketplace">Marketplace MVP</option>
+                            <option value="mvp-ai">AI/ML MVP</option>
+                            <option value="mvp-blockchain">Blockchain MVP</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Description (PRD) <span class="required">*</span></label>
+                        <textarea id="projectDescription" rows="8" placeholder="Describe your MVP in detail. Focus on core features, user flow, and key functionality needed for launch." required></textarea>
+                        <button type="button" class="btn secondary" id="enhancePrdBtn">
+                            <i class="fas fa-magic"></i> Enhance with AI
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Competitors & References</label>
+                        <div class="reference-inputs">
+                            <div class="reference-item">
+                                <input type="url" placeholder="Competitor/Reference URL" class="reference-url">
+                                <input type="text" placeholder="Notes about this reference" class="reference-notes">
+                                <button type="button" class="btn remove-btn">×</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn secondary" id="addReferenceBtn">Add Reference</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Files</label>
+                        <div class="file-upload-container">
+                            <input type="file" id="projectFiles" multiple class="file-input">
+                            <label for="projectFiles" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Drag & drop files or click to upload</span>
+                            </label>
+                            <div class="file-preview" id="filePreview"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Tech Stack <span class="required">*</span></label>
+                        <div class="technology-search-container">
+                            <div class="search-wrapper">
+                                <input type="text" id="techSearch" placeholder="Search technologies..." required>
+                                <div class="search-results" id="techSearchResults"></div>
+                            </div>
+                            <div class="selected-technologies" id="selectedTechnologies">
+                                <!-- Selected technologies will appear here -->
+                            </div>
+                            <button type="button" class="btn secondary" id="suggestTechBtn">
+                                <i class="fas fa-lightbulb"></i> Suggest Tech Stack
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Timeline <span class="required">*</span></label>
+                        <select id="projectTimeline" required>
+                            <option value="">Select preferred timeline</option>
+                            <option value="1-2">1-2 weeks (Rapid MVP)</option>
+                            <option value="2-4">2-4 weeks (Standard MVP)</option>
+                            <option value="4-8">4-8 weeks (Extended MVP)</option>
+                        </select>
+                        <small class="timeline-info">Most MVPs are completed within 1-2 weeks by our top developers</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget Range <span class="required">*</span></label>
+                        <select id="budgetRange" required>
+                            <option value="">Select budget range</option>
+                            <option value="1k-3k">$1,000 - $3,000 (Basic MVP)</option>
+                            <option value="3k-5k">$3,000 - $5,000 (Standard MVP)</option>
+                            <option value="5k-10k">$5,000 - $10,000 (Premium MVP)</option>
+                            <option value="10k+">$10,000+ (Enterprise MVP)</option>
+                        </select>
+                        <small class="budget-info">Higher budgets unlock access to our top-rated developers and faster delivery times</small>
+                    </div>
+                </div>
+                <!-- Developer Preferences -->
+                <div id="developerPreferences" class="role-preferences">
+                    <div class="form-group">
+                        <label>Connect Your Profiles <span class="required">*</span></label>
+                        <div class="social-connections">
+                            <button type="button" class="btn social-btn github">
+                                <i class="fab fa-github"></i> Connect GitHub
+                            </button>
+                            <button type="button" class="btn social-btn linkedin">
+                                <i class="fab fa-linkedin"></i> Connect LinkedIn
+                            </button>
+                            <button type="button" class="btn social-btn twitter">
+                                <i class="fab fa-twitter"></i> Connect Twitter
+                            </button>
+                        </div>
+                        <div class="connected-profiles" id="connectedProfiles">
+                            <!-- Connected profiles will appear here -->
+                        </div>
+                        <small>At least one social profile is required to verify your identity</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your 1-Liner <span class="required">*</span></label>
+                        <input type="text" id="oneLiner" placeholder="Write a catchy one-liner that will attract founders (e.g., 'Full-stack wizard turning coffee into code')" required>
+                        <small>This is your chance to stand out! Make it memorable and authentic.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hourly Rate ($) <span class="required">*</span></label>
+                        <input type="number" id="hourlyRate" min="0" step="5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Availability <span class="required">*</span></label>
+                        <select id="availability" required>
+                            <option value="">Select your availability</option>
+                            <option value="full-time">Full-time (40+ hrs/week)</option>
+                            <option value="part-time">Part-time (20-40 hrs/week)</option>
+                            <option value="freelance">Freelance (10-20 hrs/week)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Technologies <span class="required">*</span></label>
+                        <div class="technology-search-container">
+                            <div class="search-wrapper">
+                                <input type="text" id="techSearch" placeholder="Search technologies..." required>
+                                <div class="search-results" id="techSearchResults"></div>
+                            </div>
+                            <div class="selected-technologies" id="selectedTechnologies">
+                                <!-- Selected technologies will appear here -->
+                            </div>
+                        </div>
+                        <small>Select at least 3 technologies you're proficient in</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="form-navigation">
+                <button type="button" id="prevBtn" class="btn secondary" style="display: none;">Previous</button>
+                <button type="button" id="nextBtn" class="btn primary" disabled>Next</button>
+                <button type="button" id="submitBtn" class="btn primary" style="display: none;">Complete Registration</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html> 

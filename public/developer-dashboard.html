@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dashboard - VibeSwipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .info-item {
+            margin-bottom: 1rem;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">VibeSwipe</a>
+            <div class="nav-links">
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Developer Dashboard</h1>
+            <button class="btn primary" id="editProfileBtn">Edit Profile</button>
+        </div>
+
+        <div class="profile-section">
+            <h2>Your Profile</h2>
+            <div class="profile-info">
+                <div class="info-item">
+                    <div class="info-label">One Liner</div>
+                    <div class="info-value" id="oneLiner">Loading...</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Availability</div>
+                    <div class="info-value" id="availability">Loading...</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Portfolio Link</div>
+                    <div class="info-value">
+                        <a href="#" id="portfolioLink" target="_blank">Loading...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Tech Stack</div>
+                <div class="tech-stack" id="techStack">
+                    Loading...
+                </div>
+            </div>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="js/developer-dashboard.js"></script>
+</body>
+</html> 

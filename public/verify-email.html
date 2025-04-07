@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - VibeSwipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+    <style>
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4F46E5;
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .navbar .nav-links a {
+            color: #4B5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar .nav-links a:hover {
+            color: #4F46E5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">VibeSwipe</a>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#features">Features</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Verify Your Email</h1>
+            <p>Please wait while we verify your email address</p>
+        </div>
+
+        <div id="verificationStatus" class="verification-status">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <p>Verifying your email...</p>
+        </div>
+
+        <div id="verificationResult" class="verification-result" style="display: none;">
+            <div class="result-icon">
+                <i class="fas fa-check-circle success"></i>
+            </div>
+            <h2>Email Verified!</h2>
+            <p>Your email has been successfully verified.</p>
+            <a href="/login.html" class="btn primary">Continue to Login</a>
+        </div>
+
+        <div id="verificationError" class="verification-error" style="display: none;">
+            <div class="result-icon">
+                <i class="fas fa-times-circle error"></i>
+            </div>
+            <h2>Verification Failed</h2>
+            <p id="errorMessage">The verification link is invalid or has expired.</p>
+            <a href="/login.html" class="btn primary">Return to Login</a>
+        </div>
+    </div>
+
+    <script src="js/verify-email.js"></script>
+</body>
+</html> 
